@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYP Supervisor Finder</title>
+    <script type="module" src="./js/index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('./images/frederic-paulussen-e-GV4AZRabY-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="overlay">
+        <!-- Navigation -->
+        <nav class="bg-green-100 p-4 text-green-800">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-2xl font-bold">FYP Supervisor Finder</h1>
+                <div>
+                    <button id="prevBtn" class="mr-4 bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Previous</button>
+                    <button id="nextBtn" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Next</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container mx-auto p-6">
+            <!-- Filter Section -->
+            <div class="bg-white p-4 rounded-lg mb-6 border border-green-200">
+                <h2 class="text-xl font-bold text-green-700 mb-2">Filter Supervisors</h2>
+                <div class="flex gap-4">
+                    <select id="domainFilter" class="border border-green-300 p-2 rounded">
+                        <option value="">All Areas</option>
+                        <option value="AI">AI</option>
+                        <option value="Web">Web Development</option>
+                        <option value="Mobile">Mobile Apps</option>
+                        <option value="Data">Data Science</option>
+                    </select>
+                    <button id="filterBtn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+            <!-- Supervisors List -->
+            <div id="supervisorList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
